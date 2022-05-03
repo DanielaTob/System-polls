@@ -4,56 +4,61 @@
 {% block title %}Create Poll{% endblock %}
 
 {% block main %}
-<div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Create A New Poll</h3>
-            </div>
-                
-            <form method="POST">
+<div class="min-h-screen flex  justify-center bg-gray-50 py-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8">
+        <div>
+            
+            <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                Create a new Poll
+            </h2>
+         
+        </div>
+
+        <div class="rounded bg-white max-w-md rounded overflow-hidden shadow-xl p-5">
+
+            <form class="space-y-4" method="POST">
                 {% csrf_token %}
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="question">Enter Poll Question</label>
-                                {% render_field form.question class="form-control" rows="3" %}
-                            </div>
+                <input type="hidden" name="remember" value="True">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div class="grid gap-6">
+                        <div class="col-span-12">
+                            <label for="question" class="block text-sm font-medium text-gray-700">Enter Poll Question</label>
+                                {% render_field form.question class="border rounded border-2 border-gray-800" rows="3" %}
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="option1">Option 1</label>
-                                {% render_field form.option_one class="form-control" %}
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="option2">Option 2</label>
-                                {% render_field form.option_two class="form-control" %}
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="option3">Option 3</label>
-                                {% render_field form.option_three class="form-control" %}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <hr />
-                        <div class="col-lg-4">
-                            <button type="submit" class="btn btn-info">Submit</button>
-                        </div>
                     </div>
                 </div>
-            </form>
 
-        </div>
+                <div class="grid grid-cols-1 text-gray-700 font-medium text-sm">
+                    <div class="flex items-center gap-2">
+                        <label for="option1">Option 1</label>
+                                {% render_field form.option_one class="border rounded border-2 border-gray-800" %}
+                    </div>
+                    
+                    <div class="flex items-center gap-2 pt-2">
+                        <label for="option2">Option 2</label>
+                                {% render_field form.option_two class="border rounded border-2 border-gray-800" %}
+                    </div>
+
+
+                    <div class="flex items-center gap-2 pt-2">
+                        <label for="option3">Option 3</label>
+                            <p cl> {% render_field form.option_three class="border rounded border-2 border-gray-800" %}
+                    </div>
+                    
+
+                </div>
+
+
+                <div>
+                    <button type="submit" class="group relative  flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                           
+                        </span>
+                        Send Poll
+                    </button>
+                </div>
+            </form>
     </div>
 </div>
 {% endblock %}
