@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'systempolls.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'polls',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dci2ntm8q8e1u4',
+        'USER': 'jzthsopvizhdtz',
+        'PASSWORD': 'f13d73246723a407db9b1dcc8228087fc119d5a237561375bd1252ff3cf154fe',
+        'HOST': 'ec2-44-195-169-163.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
