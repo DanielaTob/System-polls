@@ -75,7 +75,7 @@ py manage.py runserver
 <img  src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"/>
 
 
-Click on the following link to see the display [Link here!](https://syspoll.herokuapp.com/)
+Click on the following link to see the display [Link here!](https://systempolls-daniela.herokuapp.com/)
 
 ## Developers 😺
 
